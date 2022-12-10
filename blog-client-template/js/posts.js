@@ -18,6 +18,7 @@ async function fetchAllBlogs() {
                     <p>${blog.date}</p>
                     <p>${blog.tags}</p>
                     <p>${blog.content}</p>
+                    <a href="post.html?id=${blog._id}">Read more</a>
                 </article>
             
             `
