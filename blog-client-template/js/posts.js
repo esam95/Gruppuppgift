@@ -5,8 +5,22 @@ async function fetchAllBlogs() {
 
         let blogsHTML = '';
         for(let blog of blogs) {
-            console.log(blog);
-
+            // console.log(blog.title);
+            // console.log(blog.tags);
+            // console.log(blog.author);
+            // console.log(blog.date);
+            // console.log(blog.content);
+            blogsHTML += `
+            
+                <article>
+                    <p>${blog.title}</p>
+                    <p>${blog.author}</p>
+                    <p>${blog.date}</p>
+                    <p>${blog.tags}</p>
+                    <p>${blog.content}</p>
+                </article>
+            
+            `
         }
 
         document.getElementById('blog-list').innerHTML = blogsHTML;
