@@ -4,8 +4,7 @@ async function getAllPosts() {
         
         
         let data = await response.json()
-        console.log(data)
-        console.log(data[2].title);
+        
         let table = document.getElementById('table');
 
         for(let i = 0; i < data.length; i++) {
@@ -16,12 +15,18 @@ async function getAllPosts() {
                 <td>${data[i].author}</td>
                 <td>${data[i].tags}</td>
                 <td>${data[i].date}</td>
-                `
+                <td>
+                    <a href="">Update</a>
+                    <a href="">Delete</a>
+                </td>
+            </tr>`
         }
 
     } catch(error) {
         console.log(error);
     }
 }
+
+
 
 getAllPosts();
