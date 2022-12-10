@@ -5,3 +5,8 @@ h1 {
 #blog-link {
     float: right;
 }
+tr
+
+th, tr, table {
+    border: 1px solid black;
+}
