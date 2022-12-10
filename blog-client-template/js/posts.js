@@ -10,16 +10,23 @@ async function fetchAllBlogs() {
             // console.log(blog.author);
             // console.log(blog.date);
             // console.log(blog.content);
+            let blogStri = blog.content; 
+            if(blogStri.length > 100) {
+                blogStri = blogStri.substring(0,100);
+
+            }
+
             blogsHTML += `
-            
+
                 <article>
                     <p>${blog.title}</p>
                     <p>${blog.author}</p>
                     <p>${blog.date}</p>
                     <p>${blog.tags}</p>
-                    <p>${blog.content}</p>
+                    <p>${blogStri}</p>
                     <a href="post.html?id=${blog._id}">Read more</a>
                 </article>
+
             
             `
         }
