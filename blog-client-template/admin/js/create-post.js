@@ -12,7 +12,7 @@ document.getElementById('create-post-form').addEventListener("submit", async fun
               },
               body: JSON.stringify(formDataObject)
         })
-        // location.replace('index.html')
+        location.replace('index.html')
     } catch(error) {
         console.log(error)
     }
